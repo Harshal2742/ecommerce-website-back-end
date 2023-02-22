@@ -1,0 +1,6 @@
+node_modules/
+*.env
+data/
+utils/dataInserter.js
+utils/dataModifier.js
+utils/reivewGenerator.js
