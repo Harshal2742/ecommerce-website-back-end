@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'development') {
 	app.use(morgan('dev'));
 }
 
-app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({policy:'cross-origin'}));
 
 const limiter = rateLimit({
 	max: 100,
