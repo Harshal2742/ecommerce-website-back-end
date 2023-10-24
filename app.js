@@ -36,13 +36,13 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use(helmet.crossOriginResourcePolicy({policy:'cross-origin'}));
 
-const limiter = rateLimit({
-	max: 100,
-	windowMs: 60 * 60 * 1000,
-	message: 'To many requests from this IP, please try in an hours!',
-});
+// const limiter = rateLimit({
+// 	max: 100,
+// 	windowMs: 60 * 60 * 1000,
+// 	message: 'To many requests from this IP, please try in an hours!',
+// });
 
-app.use('/api', limiter);
+// app.use('/api', limiter);
 app.use(compression());
 app.use(mongoSanitize());
 app.use(xss());

@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 dotenv.config({ path: './config.env' });
 
 const app = require('./app'); // this must be after configuring .env file
+mongoose.set('strictQuery', false);
 
 console.log(process.env.DATABASE);
 const DB = process.env.DATABASE.replace(
